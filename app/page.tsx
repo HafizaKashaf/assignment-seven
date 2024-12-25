@@ -1,101 +1,29 @@
-import Image from "next/image";
+import React from 'react';
+import Link from "next/link";
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+     
+       <div className="h-screen flex flex-col justify-center items-center  px-[20px]">
+       <div className='flex flex-col items-center justify-center pb-16'>
+        <h1 className='font-bold text-[20px] md:text-[24px] lg:xl:text-[36px]'>Data Fetching</h1>
+        <p className='text-gray-600 text-[16px] md:text-[20px] lg:xl:text-[26px] mt-[8px] text-center px-5 lg:xl:px-10'>Data fetching is the process of retrieving data from a server or API to use in an application. It can happen on the client side (in the browser after page load) or server side (before sending the response to the client).</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      </div>
+      <div className="hover:scale-[1.05] transition bg-transparent border-2 border-white p-[20px] rounded-lg shadow-lg hover:shadow-xl">
+        <h1 className="font-bold text-[20px] md:text-[24px] lg:xl:text-[36px] text-center capitalize">Explore <span className='text-gray-700'>Data Fetching</span>  Methods</h1>
+        <p className="text-gray-00 text-center  text-[16px] md:text-[20px] lg:xl:text-[26px] mt-[8px]"><strong>Select</strong> the best method for your needs</p>
+        <div className="flex flex-col items-center sm:justify-end sm:flex-row justify-center gap-[10px] mt-[20px]">
+        <button className='w-full p-[5px] rounded-md px-4 py-1 text-[15px] md:px-8 md:py-2.5 overflow-hidden group bg-black relative hover:bg-gradient-to-r hover:from-black hover:to-gray-900 text-white hover:ring-2 hover:ring-offset-2 hover:ring-gray-900 transition-all duration-300 ease-out'>
+        <span className='absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform-x-12 group-hover:-translate-x-40 bg-white opacity-10 rotate-12 ease'></span><Link href="client">ClientSide</Link></button>
+        <button className='w-full p-[5px] rounded-md px-4 py-1 text-[15px] md:px-8 md:py-2.5 overflow-hidden group bg-black relative hover:bg-gradient-to-r hover:from-black hover:to-gray-900 text-white hover:ring-2 hover:ring-offset-2 hover:ring-gray-900 transition-all duration-300 ease-out'>
+        <span className='absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform-x-12 group-hover:-translate-x-40 bg-white opacity-10 rotate-12 ease'></span><Link href="server">ServerSide</Link></button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
-  );
+    </div>
+  )
 }
+
+export default page
